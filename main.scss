@@ -1,0 +1,90 @@
+$modra: #12445D;
+$oranzova: #D47A43;
+$hneda: #462521;
+$zluta: #FAF0CA;
+$seda: #333333;
+$input-focus-border-color: #462521;
+$input-focus-box-shadow: 0px 0px 5px #462521;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=MuseoModerno:wght@700&display=swap');
+
+body {
+    background-color: tint-color($modra,90%);
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 80px;
+}
+
+/* navigace */
+nav {
+    margin-bottom:100px;
+}
+.navbar-dark {
+    background-color: $modra;    
+}
+
+.navbar-text, .navbar-brand {
+    color: #fff;
+}
+
+.navbar .navbar-tlacitko {    
+    padding-left: 1.1rem;
+    margin: 0px 10px;
+    transition: none !important;
+    border: 1px solid $modra;
+}
+
+.navbar .navbar-tlacitko:hover {
+    background-color: tint-color($modra,30%);
+    border: 1px solid white;
+    color: white;
+    transition: none !important;
+}
+
+
+.navbar .active {
+    background-color: tint-color($modra,10%);
+    border: 1px solid white;
+    color: white;
+}
+
+.navbar span {
+    font-family: 'MuseoModerno', cursive;
+    padding: 0px;
+    margin: 0px;
+}
+/* navigace */
+
+section {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: tint-color($modra, 80%) 2px 2px;
+}
+
+.portret {
+    max-width: 400px;
+    width: 100%;
+}
+/* uvod */
+
+.tlacitko-oranzove {
+    border: 2px solid $oranzova;
+    border-radius: 0px;
+}
+
+.tlacitko-oranzove:hover {
+    border: 2px solid $oranzova;
+    border-radius: 0px;
+    font-weight: bold;
+    background-color: tint-color($oranzova, 30%);
+    color: $black;
+}
+
+.tlacitko-oranzove:active {
+    border: 2px solid $oranzova;
+    border-radius: 0px;
+    font-weight: bold;
+    background-color: tint-color($oranzova, 30%);
+    color: $black;
+}
