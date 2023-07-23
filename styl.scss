@@ -71,6 +71,7 @@ section {
 .tlacitko-oranzove {
     border: 2px solid $oranzova;
     border-radius: 0px;
+    background-color: tint-color($oranzova, 90%);
 }
 
 .tlacitko-oranzove:hover {
@@ -87,5 +88,22 @@ section {
     font-weight: bold;
     background-color: tint-color($oranzova, 30%);
     color: $black;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.ikony-velke{
+    font-size: 4rem;
+    color: $hneda;
+}
+
+.ikony-velke:hover{    
+    opacity: 0.8;
+}
+
+.card {
+    box-shadow: grey 1px 1px;
 }
 

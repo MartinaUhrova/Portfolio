@@ -1,121 +1,338 @@
 ﻿<!DOCTYPE html>
 
-<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" /> <!--kodovani znaku pro HTML dokument-->
-    <title>Martina Uhrová portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Zajisti responzivitu-->
+<html lang="cs-cz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Martina Uhrová" />
-    <meta name="keywords" content="HTML, CSS, portfolio" /> <!--Dnes uz jen pro kodery-->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <meta name="keywords" content="HTML, CSS, portfolio" />
+
+    <title>Martina Uhrová portfolio</title>
+
     <link href="styl.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <!--Vyskakovaci okno s upozornenim-->
-    <script language="JavaScript">
-        alert("Tyto stránky jsou v přípravě! Přijďte, prosím, později.");
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!-- navigace -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container-fluid">
-            <span class="navbar-text d-none d-md-block fs-3">
-                Martina Uhrová
-            </span>
-            <button class="navbar-toggler ms-auto m-2"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#hlavni-navigace">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="hlavni-navigace">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link navbar-tlacitko active" href="#omne">O mně</a>
-                    <a class="nav-link navbar-tlacitko" href="#dovednosti">Dovednosti</a>
-                    <a class="nav-link navbar-tlacitko" href="#projekty">Projekty</a>
-                    <a class="nav-link navbar-tlacitko" href="#zajmy">Zájmy</a>
-                    <a class="nav-link navbar-tlacitko" href="#kontakt">Kontakt</a>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <span class="navbar-text d-none d-md-block fs-3"> Martina Uhrová </span>
+        <button
+          class="navbar-toggler ms-auto m-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#hlavni-navigace"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="hlavni-navigace">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link navbar-tlacitko active" href="#omne">O mně</a>
+            <a class="nav-link navbar-tlacitko" href="#dovednosti"
+              >Dovednosti</a
+            >
+            <a class="nav-link navbar-tlacitko" href="#projekty">Projekty</a>
+            <a class="nav-link navbar-tlacitko" href="#zajmy">Zájmy</a>
+            <a class="nav-link navbar-tlacitko" href="#kontakt">Kontakt</a>
+          </div>
         </div>
+      </div>
     </nav>
     <!-- navigace -->
-    <div data-bs-spy="scroll" data-bs-target="#hlavni-navigace" data-bs-smooth-scroll="true" tabindex="0">
+    <!--Zobrazeni aktivni zalozky pri skrolovani-->
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#hlavni-navigace"
+      data-bs-smooth-scroll="true"
+      tabindex="0"
+    >
+      <!-- o mne -->
+      <section id="omne" class="container p-4 pb-1">
+        <div class="row align-items-center">
+          <div class="col-12 offset-md-1 col-md-4">
+            <img
+              src="Img/portret.png"
+              class="img-fluid mb-4 portret d-block mx-auto"
+              alt="portret"
+            />
+          </div>
+          <div class="col-12 col-md-7 justify-content-center">
+            <h1 class="uvod display-3">Martina Uhrová</h1>
+            <h3 class="ms-4 uvod">
+              <strong>junior developer</strong>, analytik dat
+            </h3>
+            <h3 class="ms-5 uvod">na rodičovské dovolené</h3>
 
-        <!--Zobrazeni aktivni zalozky pri skrolovani-->
-        <!-- o mne -->
-        <section class="container-fluid col-10 p-4 pb-1" id="omne">
-            <div class="row align-items-center">
-                <div class="col-12 offset-md-1 col-md-4">
-                    <img src="Img/portret.png" class="img-fluid mb-4 portret d-block mx-auto" alt="portret" />
-                </div>
-                <div class="col-12 col-md-7">
-                    <h1 class="uvod">Martina Uhrová</h1>
-                    <h2 class="ms-4 uvod"><strong>junior developer</strong>, analytik dat</h2>
-                    <p class="ms-5 uvod">
-                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod.
-                    </p>
-                    <div class="d-flex justify-content-center">
-                        <a class="btn tlacitko-oranzove m-3" href="Files/Uhrova_CV_CZ_bez_kontaktu.pdf">Životopis</a>
-                        <a class="btn tlacitko-oranzove m-3" href="#kontakt">Kontakt</a>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-center">
+              <a
+                class="btn tlacitko-oranzove m-3"
+                href="Files/Uhrova_CV_CZ_bez_kontaktu.pdf"
+                >Životopis</a
+              >
+              <a class="btn tlacitko-oranzove m-3" href="#kontakt">Kontakt</a>
             </div>
-            <div class="row" id="omne">
-                <h1>O mně</h1>
-                <p>
-                    Po vystudování oboru Statistika a analýza dat na MU jsem začala pracovat jako analytik dat na Ústavu zdravotnických informací a statistiky. Při práci analytika jsem objevila své nadšení pro programování a tvorbu aplikací a ráda bych změnila své profesní zaměření a věnovala se frontend developmentu. 
+          </div>
+        </div>
+        <div class="row" id="omne">
+          <h1>O mně</h1>
+          <p>
+            Po vystudování oboru Statistika a analýza dat na MU jsem začala
+            pracovat jako analytik dat na Ústavu zdravotnických informací a
+            statistiky ČR. Při práci analytika jsem objevila své nadšení pro
+            programování a tvorbu aplikací a ráda bych změnila své profesní
+            zaměření a věnovala se programování na plný úvazek.
+          </p>
+          <p>
+            Proto jsem si na rodičovské dovolené doplnila vzdělání o intenzivní
+            rekvalifikační kurz Objektově orientované programování. V
+            současnosti jsem stále na rodičovské dovolené.
+          </p>
+        </div>
+      </section>
+      <!-- /o mne -->
+      <!-- dovednosti -->
+      <section id="dovednosti" class="container p-4 pb-1 mt-4">
+        <h2 class="mt-4">Dovednosti</h2>
+        <p>Tady budou dovednosti.</p>
+      </section>
+      <!-- /dovednosti -->
+      <!-- projekty -->
+      <section id="projekty" class="container p-4 pb-1 mt-4">
+        <div class="row">
+          <h2 class="mt-4">Projekty</h2>
+          <!-- Bootstrap -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-4 mx-auto">
+              <img
+                src="img/cv_bootstrap.png"
+                class="card-img-bottom mb-3"
+                alt="bootstrap project image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa-brands fa-bootstrap"></i
+                  ><strong> Bootstrap</strong>
+                </h5>
+                <p class="card-text">
+                  Samostatný školní projekt, kde bylo úkolem vytvořit pomocí
+                  Bootrstrapu webové stránky fiktivního hotelu (limit 8 hodin).
                 </p>
-                <p>
-                    Proto jsem si na rodičovské dovolené doplnila vzdělání o intenzivní rekvalifikační kurz Objektově orientované programování. V současnosti jsem stále na rodičovské dovolené.
+                <div class="d-flex justify-content-center">
+                  <a
+                    href="https://github.com/MartinaUhrova/Cviceni_Bootstrap.git"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-code"></i> Kód</a
+                  >
+                  <a
+                    href="cv_bootstrap/hotel.html"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-eye"></i> Ukázka</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Bootrstrap -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-4 mx-auto">
+              <img
+                src="img/empty.png"
+                class="card-img-bottom mb-3"
+                alt="bootstrap project image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa-brands fa-bootstrap"></i
+                  ><strong> Bootstrap</strong>
+                </h5>
+                <p class="card-text">
+                  Samostatný školní projekt, kde bylo úkolem vytvořit pomocí
+                  Bootrstrapu webové stránky fiktivního hotelu (limit 8 hodin).
                 </p>
-            </div>
-        </section>
-        <!-- o mne -->
-        <!-- dovednosti -->
-        <section class="container-fluid col-10 p-4 pb-1 mt-4" id="dovednosti">
-            <h1 class="mt-4">Dovednosti</h1>
-            <p>Tady budou dovednosti.</p>
-        </section>
-        <!-- dovednosti -->
-        <!-- projekty -->
-        <section class="container-fluid col-10 p-4 pb-1 mt-4" id="projekty">
-            <h1 class="mt-4">Projekty</h1>
-            <p>Tady budou projekty.</p>
-        </section>
-        <!-- projekty -->
-        <!-- zajmy -->
-        <section class="container-fluid col-10 p-4 pb-1 mt-4" id="zajmy">
-            <h1 class="mt-4">Zájmy</h1>
-            <p>Tady budou zajmy.</p>
-        </section>
-        <!-- zajmy -->
-        <!-- kontakt -->
-        <section class="container-fluid col-10 p-4 pb-1 mt-4" id="kontakt">
-            <h1 class="mt-4">Kontakt</h1>
-            <div class="row">
-                <div class="col-4">
-                    Adresa
+                <div class="d-flex justify-content-center">
+                  <a
+                    href="https://github.com/MartinaUhrova/Cviceni_Bootstrap.git"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-code"></i> Kód</a
+                  >
+                  <a
+                    href="cv_bootstrap/hotel.html"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-eye"></i> Ukázka</a
+                  >
                 </div>
-                <div class="col-6">
-                    <h2>Napište mi</h2>
-                    <form action="" method="post">
-                        <label for="jmeno" class="form-label">Jméno a příjmení</label>
-                        <input type="text" class="form-control mb-2" id="jmeno" name="jmeno" />
-                        <label for="email" class="form-label">E-mail*</label>
-                        <input type="email" class="form-control mb-2" id="email" name="email" required placeholder="VasEmail@gmail.com" />
-                        <label for="predmet" class="form-label">Předmět</label>
-                        <input type="text" class="form-control mb-2" id="predmet" name="predmet" />
-                        <label for="zprava" class="form-label">Zpráva</label>
-                        <textarea name="text" class="form-control mb-3" rows="5" id="zprava">Kontaktní formulář je zatím nefunkční.
-                        </textarea>
-                        <button type="submit" class="btn tlacitko-oranzove">Odeslat</button>
-                    </form>
-                </div>
+              </div>
             </div>
-        </section>
-        <!-- kontakt -->
-
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-4 mx-auto">
+              <img
+                src="img/empty.png"
+                class="card-img-bottom mb-3"
+                alt="bootstrap project image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa-brands fa-bootstrap"></i
+                  ><strong> Bootstrap</strong>
+                </h5>
+                <p class="card-text">
+                  Samostatný školní projekt, kde bylo úkolem vytvořit pomocí
+                  Bootrstrapu webové stránky fiktivního hotelu (limit 8 hodin).
+                </p>
+                <div class="d-flex justify-content-center">
+                  <a
+                    href="https://github.com/MartinaUhrova/Cviceni_Bootstrap.git"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-code"></i> Kód</a
+                  >
+                  <a
+                    href="cv_bootstrap/hotel.html"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-eye"></i> Ukázka</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card my-4 mx-auto">
+              <img
+                src="img/empty.png"
+                class="card-img-bottom mb-3"
+                alt="bootstrap project image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa-brands fa-bootstrap"></i
+                  ><strong> Bootstrap</strong>
+                </h5>
+                <p class="card-text">
+                  Samostatný školní projekt, kde bylo úkolem vytvořit pomocí
+                  Bootrstrapu webové stránky fiktivního hotelu (limit 8 hodin).
+                </p>
+                <div class="d-flex justify-content-center">
+                  <a
+                    href="https://github.com/MartinaUhrova/Cviceni_Bootstrap.git"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-code"></i> Kód</a
+                  >
+                  <a
+                    href="cv_bootstrap/hotel.html"
+                    target="_blank"
+                    class="btn tlacitko-oranzove mx-2"
+                    ><i class="fa-solid fa-eye"></i> Ukázka</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /projekty -->
+      <!-- zajmy -->
+      <section id="zajmy" class="container p-4 pb-1 mt-4">
+        <h2 class="mt-4">Zájmy</h2>
+        <p>Tady budou zajmy.</p>
+      </section>
+      <!-- /zajmy -->
+      <!-- kontakt -->
+      <section id="kontakt" class="container p-4 pb-1 my-4">
+        <h2 class="mt-4">Kontakt</h2>
+        <div class="row">
+          <div class="col-12 col-md-6 order-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41780.68410921476!2d16.73902793075286!3d49.11907489624723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712c2765e7ca183%3A0x602907efce5069e4!2zNjgzIDUyIEhvc3TEm3LDoWRreS1SZcWhb3Y!5e0!3m2!1scs!2scz!4v1690143509070!5m2!1scs!2scz"
+              width="100%"
+              height="400px"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="d-flex justify-content-center my-2">
+              <a
+                href="https://www.linkedin.com/in/martina-uhrova"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin ikony-velke my-1 mx-2"></i
+              ></a>
+              <a href="https://github.com/MartinaUhrova" target="_blank">
+                <i class="fa-brands fa-square-github ikony-velke my-1 mx-2"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/martina.hlostova/"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-square-facebook ikony-velke my-1 mx-2"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <h3>Napište mi</h3>
+            <form action="" method="post">
+              <label for="jmeno" class="form-label">Jméno a příjmení</label>
+              <input
+                type="text"
+                class="form-control mb-2"
+                id="jmeno"
+                name="jmeno"
+              />
+              <label for="email" class="form-label">E-mail*</label>
+              <input
+                type="email"
+                class="form-control mb-2"
+                id="email"
+                name="email"
+                required
+                placeholder="VasEmail@gmail.com"
+              />
+              <label for="predmet" class="form-label">Předmět</label>
+              <input
+                type="text"
+                class="form-control mb-2"
+                id="predmet"
+                name="predmet"
+              />
+              <label for="zprava" class="form-label">Zpráva</label>
+              <textarea
+                name="text"
+                class="form-control mb-3"
+                rows="5"
+                id="zprava"
+              >
+Kontaktní formulář je zatím nefunkční.
+                        </textarea
+              >
+              <button type="submit" class="btn tlacitko-oranzove mb-4">
+                Odeslat
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- /kontakt -->
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
