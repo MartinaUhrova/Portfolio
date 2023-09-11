@@ -11990,10 +11990,11 @@ body {
 /* navigace */
 nav {
   margin-bottom: 100px;
+  box-shadow: 0 3px 3px #333333;
 }
 
 .navbar-dark {
-  background-color: #12445D;
+  background-color: hsl(200, 68%, 22%);
 }
 
 .navbar-text, .navbar-brand {
@@ -12004,18 +12005,18 @@ nav {
   padding-left: 1.1rem;
   margin: 0px 10px;
   transition: none !important;
-  border: 1px solid #12445D;
+  border: 1px solid hsl(200, 68%, 22%);
 }
 
 .navbar .navbar-tlacitko:hover {
-  background-color: #597c8e;
+  background-color: #597d8e;
   border: 1px solid white;
   color: white;
   transition: none !important;
 }
 
 .navbar .active {
-  background-color: #2a576d;
+  background-color: #2a586e;
   border: 1px solid white;
   color: white;
 }
@@ -12076,4 +12077,243 @@ h2, .h2 {
 
 .card {
   box-shadow: grey 1px 1px;
+}
+
+@keyframes text-fade1 {
+  0% {
+    color: transparent;
+    font-size: 95%;
+  }
+  17% {
+    color: white;
+    content: "Hudba";
+    font-size: 100%;
+  }
+  34% {
+    color: transparent;
+    font-size: 95%;
+  }
+  51% {
+    color: white;
+    content: "Hra na piano";
+    font-size: 100%;
+  }
+  68% {
+    color: transparent;
+    font-size: 95%;
+  }
+  84% {
+    color: white;
+    content: "Hra na akordeon";
+    font-size: 100%;
+  }
+  100% {
+    color: transparent;
+    font-size: 95%;
+  }
+}
+@keyframes text-fade2 {
+  0% {
+    color: transparent;
+    font-size: 95%;
+  }
+  17% {
+    color: white;
+    content: "Gastronomie";
+    font-size: 100%;
+  }
+  34% {
+    color: transparent;
+    font-size: 95%;
+  }
+  51% {
+    color: white;
+    content: "Asijská kuchyně";
+    font-size: 100%;
+  }
+  68% {
+    color: transparent;
+    font-size: 95%;
+  }
+  84% {
+    color: white;
+    content: "Vaření";
+    font-size: 100%;
+  }
+  100% {
+    color: transparent;
+    font-size: 95%;
+  }
+}
+@keyframes text-fade3 {
+  0% {
+    color: transparent;
+    font-size: 95%;
+  }
+  17% {
+    color: white;
+    content: "Deskové hry";
+    font-size: 100%;
+  }
+  34% {
+    color: transparent;
+    font-size: 95%;
+  }
+  51% {
+    color: white;
+    content: "Únikové hry";
+    font-size: 100%;
+  }
+  68% {
+    color: transparent;
+    font-size: 95%;
+  }
+  84% {
+    color: white;
+    content: "Šifrovačky";
+    font-size: 100%;
+  }
+  100% {
+    color: transparent;
+    font-size: 95%;
+  }
+}
+@keyframes text-fade4 {
+  0% {
+    color: transparent;
+    font-size: 95%;
+  }
+  17% {
+    color: white;
+    content: "Počítačové hry";
+    font-size: 100%;
+  }
+  34% {
+    color: transparent;
+    font-size: 95%;
+  }
+  51% {
+    color: white;
+    content: "RPG, rougelite";
+    font-size: 100%;
+  }
+  68% {
+    color: transparent;
+    font-size: 95%;
+  }
+  84% {
+    color: white;
+    content: "Simulátory, adventury ";
+    font-size: 98%;
+    overflow-x: visible;
+  }
+  100% {
+    color: transparent;
+    font-size: 95%;
+  }
+}
+.carousel-item {
+  position: relative;
+}
+
+.carousel-label1 {
+  position: absolute;
+  top: -3rem;
+  left: -4rem;
+}
+
+.carousel-label1:before {
+  content: "";
+  animation-name: text-fade1;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.carousel-label2 {
+  position: absolute;
+  top: -3rem;
+  left: -4rem;
+}
+
+.carousel-label2:before {
+  content: "";
+  animation-name: text-fade2;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.carousel-label3 {
+  position: absolute;
+  top: -3rem;
+  left: -4rem;
+}
+
+.carousel-label3:before {
+  content: "";
+  animation-name: text-fade3;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.carousel-label4 {
+  position: absolute;
+  top: -3rem;
+  left: -4rem;
+}
+
+.carousel-label4:before {
+  content: "";
+  animation-name: text-fade4;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.svg-container {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.svg-triangle, .svg-rectangle {
+  fill: hsl(24, 65%, 70%);
+}
+
+.svg-text {
+  position: absolute;
+  top: 1.1rem;
+  left: 7%;
+  margin-bottom: 2rem;
+}
+
+.svg-icon {
+  font-size: 3rem;
+  margin-top: -0.5rem;
+}
+
+.svg-animation-rectangle {
+  transform: scaleX(95);
+  transition: transform 0.2s ease-in-out;
+}
+
+.svg-animation-triangle {
+  transform: translateX(94%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.svg-animation-text {
+  font-weight: bolder;
+}
+
+.svg-icon-div {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
 }/*# sourceMappingURL=styl.css.map */
