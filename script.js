@@ -1,3 +1,12 @@
+//Inicializace tooltipu
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+
+//Animace v sekci Dovednosti
 function addSvgAnimation(id) {
   document
     .querySelector(`#svg-row${id} .svg-rectangle`)
@@ -43,3 +52,42 @@ function removeSvgAnimation(id) {
     element.style.transitionDelay = `0s`;
   }
 }
+
+//Animace textu v nadpisu Zajmy
+let counter = 0;
+let timer;
+const btnNext = document.querySelector(".carousel-control-next");
+const btnPrev = document.querySelector(".carousel-control-prev");
+const zajmyClass = document.querySelector("#zajmy-text-fade").classList;
+btnNext.addEventListener("click", (event) => {
+  if (event.detail === 1) {
+    timer = setTimeout(() => {
+      zajmyClass.remove(`text-fade${((counter % 4) + 4) % 4}`);
+      zajmyClass.add(`text-fade${((++counter % 4) + 4) % 4}`);
+    }, 200);
+  }
+});
+btnNext.addEventListener("dblclick", (event) => {
+  clearTimeout(timer);
+  zajmyClass.remove(`text-fade${((counter % 4) + 4) % 4}`);
+  zajmyClass.add(`text-fade${((++counter % 4) + 4) % 4}`);
+});
+
+btnPrev.addEventListener("click", (event) => {
+  if (event.detail === 1) {
+    timer = setTimeout(() => {
+      zajmyClass.remove(`text-fade${((counter % 4) + 4) % 4}`);
+      zajmyClass.add(`text-fade${((--counter % 4) + 4) % 4}`);
+    }, 200);
+  }
+});
+btnPrev.addEventListener("dblclick", (event) => {
+  clearTimeout(timer);
+  zajmyClass.remove(`text-fade${((counter % 4) + 4) % 4}`);
+  zajmyClass.add(`text-fade${((--counter % 4) + 4) % 4}`);
+});
+
+//Zavirani hamburger menu
+document.querySelector(".navbar-nav").addEventListener("click", () => {
+  document.querySelector(".navbar-collapse").classList.remove("show");
+});

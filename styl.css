@@ -12079,197 +12079,164 @@ h2, .h2 {
   box-shadow: grey 1px 1px;
 }
 
-@keyframes text-fade1 {
+.mensi-text {
+  font-size: 0.8rem;
+}
+
+@keyframes text-fade0 {
   0% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   17% {
-    color: white;
-    content: "Hudba";
+    color: black;
+    content: "hudba";
     font-size: 100%;
   }
   34% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   51% {
-    color: white;
-    content: "Hra na piano";
+    color: black;
+    content: "hra na piano";
     font-size: 100%;
   }
   68% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   84% {
-    color: white;
-    content: "Hra na akordeon";
+    color: black;
+    content: "hra na akordeon";
     font-size: 100%;
   }
   100% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
+  }
+}
+@keyframes text-fade1 {
+  0% {
+    color: transparent;
+    font-size: 98%;
+  }
+  17% {
+    color: black;
+    content: "gastronomie";
+    font-size: 100%;
+  }
+  34% {
+    color: transparent;
+    font-size: 98%;
+  }
+  51% {
+    color: black;
+    content: "asijská kuchyně";
+    font-size: 100%;
+  }
+  68% {
+    color: transparent;
+    font-size: 98%;
+  }
+  84% {
+    color: black;
+    content: "vaření";
+    font-size: 100%;
+  }
+  100% {
+    color: transparent;
+    font-size: 98%;
   }
 }
 @keyframes text-fade2 {
   0% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   17% {
-    color: white;
-    content: "Gastronomie";
+    color: black;
+    content: "deskové hry";
     font-size: 100%;
   }
   34% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   51% {
-    color: white;
-    content: "Asijská kuchyně";
+    color: black;
+    content: "únikové hry";
     font-size: 100%;
   }
   68% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   84% {
-    color: white;
-    content: "Vaření";
+    color: black;
+    content: "šifrovačky";
     font-size: 100%;
   }
   100% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
 }
 @keyframes text-fade3 {
   0% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   17% {
-    color: white;
-    content: "Deskové hry";
+    color: black;
+    content: "počítačové hry";
     font-size: 100%;
   }
   34% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   51% {
-    color: white;
-    content: "Únikové hry";
-    font-size: 100%;
-  }
-  68% {
-    color: transparent;
-    font-size: 95%;
-  }
-  84% {
-    color: white;
-    content: "Šifrovačky";
-    font-size: 100%;
-  }
-  100% {
-    color: transparent;
-    font-size: 95%;
-  }
-}
-@keyframes text-fade4 {
-  0% {
-    color: transparent;
-    font-size: 95%;
-  }
-  17% {
-    color: white;
-    content: "Počítačové hry";
-    font-size: 100%;
-  }
-  34% {
-    color: transparent;
-    font-size: 95%;
-  }
-  51% {
-    color: white;
+    color: black;
     content: "RPG, rougelite";
     font-size: 100%;
   }
   68% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
   84% {
-    color: white;
-    content: "Simulátory, adventury ";
-    font-size: 98%;
+    color: black;
+    content: "PC simulátory ";
+    font-size: 100%;
     overflow-x: visible;
   }
   100% {
     color: transparent;
-    font-size: 95%;
+    font-size: 98%;
   }
 }
-.carousel-item {
-  position: relative;
-}
-
-.carousel-label1 {
-  position: absolute;
-  top: -3rem;
-  left: -4rem;
-}
-
-.carousel-label1:before {
+.text-fade0:before, .text-fade1:before, .text-fade2:before, .text-fade3:before {
   content: "";
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.text-fade0:before {
+  animation-name: text-fade0;
+}
+
+.text-fade1:before {
   animation-name: text-fade1;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
-.carousel-label2 {
-  position: absolute;
-  top: -3rem;
-  left: -4rem;
-}
-
-.carousel-label2:before {
-  content: "";
+.text-fade2:before {
   animation-name: text-fade2;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
-.carousel-label3 {
-  position: absolute;
-  top: -3rem;
-  left: -4rem;
-}
-
-.carousel-label3:before {
-  content: "";
+.text-fade3:before {
   animation-name: text-fade3;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-.carousel-label4 {
-  position: absolute;
-  top: -3rem;
-  left: -4rem;
-}
-
-.carousel-label4:before {
-  content: "";
-  animation-name: text-fade4;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
 .svg-container {
@@ -12280,7 +12247,7 @@ h2, .h2 {
 }
 
 .svg-triangle, .svg-rectangle {
-  fill: hsl(24, 65%, 70%);
+  fill: hsl(200, 68%, 22%);
 }
 
 .svg-text {
@@ -12307,13 +12274,30 @@ h2, .h2 {
 
 .svg-animation-text {
   font-weight: bolder;
+  color: white;
 }
 
 .svg-icon-div {
   opacity: 0;
+  color: hsl(200, 68%, 22%);
 }
 
 .visible {
   opacity: 1;
   transition: opacity 0.1s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .svg-icon-div {
+    color: white;
+  }
+}
+.odkaz {
+  color: #462521;
+}
+
+.imgLogo {
+  background-color: hsl(200, 68%, 22%);
+  width: 3rem;
+  margin-top: -0.5rem;
 }/*# sourceMappingURL=styl.css.map */
