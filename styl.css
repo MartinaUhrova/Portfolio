@@ -12300,4 +12300,14 @@ h2, .h2 {
   background-color: hsl(200, 68%, 22%);
   width: 3rem;
   margin-top: -0.5rem;
+}
+
+.vyska-radku {
+  height: 3rem;
+}
+
+@media (min-width: 768px) {
+  #nadpis-zajmy::after {
+    content: ":";
+  }
 }/*# sourceMappingURL=styl.css.map */

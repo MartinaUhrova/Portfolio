@@ -341,6 +341,15 @@ transition: transform 0.2s ease-in-out;
     margin-top: -0.5rem;
 }
 
+.vyska-radku {
+    height: 3rem;
+}
+
+@include media-breakpoint-up(md) {
+    #nadpis-zajmy::after{
+        content:':';
+    }
+}
 
 
 

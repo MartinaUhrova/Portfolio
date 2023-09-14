@@ -146,28 +146,28 @@ include_once("db_connect.php");
                     data-bs-title="CSS3"
                   ></i>
                 </div>
-                <div class="col-1 col-md-auto mx-2 svg-icon-div hidden">
+                <div class="col-1 col-md-auto mx-2 svg-icon-div">
                   <i
                     class="fa-brands fa-js svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="Java Script"
                   ></i>
                 </div>
-                <div class="col-1 col-md-auto mx-2 svg-icon-div hidden">
+                <div class="col-1 col-md-auto mx-2 svg-icon-div">
                   <i
                     class="fa-brands fa-react svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="React"
                   ></i>
                 </div>
-                <div class="col-1 col-md-auto mx-2 svg-icon-div hidden">
+                <div class="col-1 col-md-auto mx-2 svg-icon-div">
                   <i
                     class="fa-brands fa-bootstrap svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="Bootstrap"
                   ></i>
                 </div>
-                <div class="col-1 col-md-auto ms-3 svg-icon-div hidden">
+                <div class="col-1 col-md-auto ms-3 svg-icon-div">
                   <i
                     class="fa-brands fa-php svg-icon"
                     data-bs-toggle="tooltip"
@@ -321,28 +321,28 @@ include_once("db_connect.php");
                 <div class="col-12 col-md-auto mb-4 mb-md-0 me-0 me-lg-5">
                   <h3 class="text-bold">DevOps</h3>
                 </div>
-                <div class="col-auto svg-icon-div">
+                <div class="col-1 col-md-auto ms-2 svg-icon-div">
                   <i
                     class="fa-brands fa-windows svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="Windows Server"
                   ></i>
                 </div>
-                <div class="col-auto svg-icon-div">
+                <div class="col-1 col-md-auto mx-3 svg-icon-div">
                   <i
                     class="fa-brands fa-linux svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="Linux"
                   ></i>
                 </div>
-                <div class="col-auto svg-icon-div">
+                <div class="col-1 col-md-auto mx-3 svg-icon-div">
                   <i
                     class="fa-brands fa-docker svg-icon"
                     data-bs-toggle="tooltip"
                     data-bs-title="Docker"
                   ></i>
                 </div>
-                <div class="col-auto svg-icon-div">
+                <div class="col-1 col-md-auto mx-3 svg-icon-div">
                   <img
                     src="Img/Azure.png"
                     alt="Azure logo"
@@ -351,7 +351,7 @@ include_once("db_connect.php");
                     data-bs-title="MS Azure"
                   />
                 </div>
-                <div class="col-auto svg-icon-div">
+                <div class="col-1 col-md-auto ms-3 svg-icon-div">
                   <i
                     class="fa-brands fa-github svg-icon"
                     data-bs-toggle="tooltip"
@@ -562,10 +562,10 @@ include_once("db_connect.php");
         <!-- zajmy -->
         <section id="zajmy" class="container p-4 mt-5">
           <div class="row">
-            <div class="col-auto mb-3">
-              <h2 class="">Zájmy:</h2>
+            <div class="col-12 col-md-auto mb-0 mb-md-3">
+              <h2 id="nadpis-zajmy">Zájmy</h2>
             </div>
-            <div class="col">
+            <div class="col-auto mx-auto mx-md-0 vyska-radku">
               <h2 id="zajmy-text-fade" class="text-fade0"></h2>
             </div>
           </div>
@@ -657,7 +657,7 @@ include_once("db_connect.php");
             </div>
             <div class="col-12 col-md-6">
               <h3>Napište mi</h3>
-              <form action="index.php" method="post">
+              <form action="index.php#kontakt" method="post">
                 <label for="jmeno" class="form-label">Jméno a příjmení</label>
                 <input
                   type="text"
@@ -702,32 +702,32 @@ Zde mi můžete zanechat zprávu...
                     Odeslat
                   </button>
                   <?php
-              if (!$connection) {
-                die("Nelze se připojit do databáze. ");
-              }
+                if (!$connection) {
+                  die("Nelze se připojit do databáze. ");
+                }
 
-              if (isset($_POST["submit_form"])) {
-                $datum = date('Y/m/d H:i:s', time());
-                $query = "INSERT INTO zpravy(cas, jmeno, email, predmet, zprava) VALUES ('" .
-                  $datum . "', '" .
-                  addslashes($_POST["jmeno"]) . "', '" .
-                  addslashes($_POST["email"]) . "', '" .
-                  addslashes($_POST["predmet"]) . "', '" .
-                  addslashes($_POST["zprava"]) . "'); ";
-                $result = mysqli_query($connection, $query);
-              ?>
+                if (isset($_POST["submit_form"])) {
+                  $datum = date('Y/m/d H:i:s', time());
+                  $query = "INSERT INTO zpravy(cas, jmeno, email, predmet, zprava) VALUES ('" .
+                    $datum . "', '" .
+                    addslashes($_POST["jmeno"]) . "', '" .
+                    addslashes($_POST["email"]) . "', '" .
+                    addslashes($_POST["predmet"]) . "', '" .
+                    addslashes($_POST["zprava"]) . "'); ";
+                  $result = mysqli_query($connection, $query);
+                ?>
 
                   <span class="ms-4 mt-2"
                     ><em>
                       <?php
-                  if ($result) {
-                    echo "Zpráva byla úspěšně odeslána!";
-                  } else {
-                    echo "Zpravu se nepodařilo odeslat.";
+                    if ($result) {
+                      echo "Zpráva byla úspěšně odeslána!";
+                    } else {
+                      echo "Zpravu se nepodařilo odeslat.";
+                    }
+                    mysqli_close($connection);
                   }
-                  mysqli_close($connection);
-                }
-                  ?>
+                    ?>
                     </em>
                   </span>
                 </div>
